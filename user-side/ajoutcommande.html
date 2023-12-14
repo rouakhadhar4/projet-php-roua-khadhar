@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter Commande</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Additional Styles for a vibrant look */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input.form-control {
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            box-shadow: none;
+            color: #555;
+            padding: 12px;
+        }
+
+        input.form-control:focus {
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Ajouter une commande</h2>
+
+        <form action="ajoutcommande.php" method="post">
+            <div class="form-group">
+                <label for="idCommande">ID commande:</label>
+                <input type="text" class="form-control" name="idCommande" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" class="form-control" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" class="form-control" name="prenom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ville">Ville:</label>
+                <input type="text" class="form-control" name="ville" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Téléphone:</label>
+                <input type="text" class="form-control" name="telephone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cartepostale">Code postal:</label>
+                <input type="text" class="form-control" name="cartepostale" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dateCommande">Date de commande:</label>
+                <input type="text" class="form-control" name="dateCommande" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Qte">Quantité:</label>
+                <input type="text" class="form-control" name="Qte" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Statut:</label>
+                <input type="text" class="form-control" name="status" required>
+            </div>
+
+            <button type="submit" class="btn btn-success">Ajouter la commande</button>
+        </form>
+    </div>
+
+ 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<?php
+require_once('../controllers/articleController.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $idArticle = $_POST['idArticle'];
+
+    $controller = new articleController();
+    $article = $controller->getArticleById($idArticle);
+
+    if ($article) {
+        // Display the form to modify the article
+        ?>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+            <title>Modifier un article</title>
+            <style>
+                /* Your existing styles here */
+            </style>
+        </head>
+        <body>
+
+            <div class="navbar">
+                <!-- Your navigation links here -->
+            </div>
+
+            <form action="modifier.php" method="post" enctype="multipart/form-data">
+                
+                <label>ID Article:</label>
+                <input type="text" name="idArticle" value="<?= htmlspecialchars($article->getIdArticle()) ?>" readonly>
+
+                <label>Nom:</label>
+                <input type="text" name="nom" value="<?= htmlspecialchars($article->getNom()) ?>" required>
+
+                <label>Description:</label>
+                <input type="text" name="description" value="<?= htmlspecialchars($article->getDescription()) ?>" required>
+
+                <label>Image:</label>
+                <input type="file" name="image" id="image" accept="images/*">
+                
+
+                <label>Prix:</label>
+                <input type="text" name="prix" value="<?= htmlspecialchars($article->getPrix()) ?>" required>
+
+                <label>Quantité en Stock:</label>
+                <input type="text" name="qtestock" value="<?= htmlspecialchars($article->getQteStock()) ?>" required>
+
+                <div class="custom-buttons">
+                    <button id="add-btn" type="submit">Modifier</button>
+                    <button id="cancel-btn" type="reset">Annuler</button>
+                </div>
+            </form>
+
+            <div class="footer">
+                <!-- Your footer content here -->
+            </div>
+
+        </body>
+        </html>
+        <?php
+    } else {
+        echo "Article non trouvé.";
+    }
+}
+?>

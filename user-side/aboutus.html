@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 15px;
+            text-align: right;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        .contact-icons {
+            text-align: center;
+        }
+
+        .contact-icons p {
+            margin-bottom: 10px;
+        }
+
+        .contact-icons i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+        .body {
+            font-family: 'Arial', sans-serif;
+            background: url('images/roua.jpg') center center;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 15px;
+            text-align: right;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            
+
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: back;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .jumbotron {
+            background: url('images/roua.jpg') center center;
+            background-size: cover;
+            color: #fff;
+            padding: 85px 0;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .jumbotron h2 {
+            font-size: 3.5em;
+            color: #ff8080;
+        }
+
+        .jumbotron p {
+            font-size: 1.8em;
+            margin-top: 20px;
+            color: #ff8080;
+        }
+        .text-left {
+    text-align: left;
+}
+
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ff8080;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #ff8080;
+        }
+
+        .product-card {
+            margin-top: 30px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        footer {
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+</head>
+<body>
+ 
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.php">Home</a>
+    <a class="navbar-brand" href="shop.php">Shop</a>
+    <a class="navbar-brand" href="aboutus.html">aboutus</a>
+  
+
+    <a class="navbar-brand" href="deconnexionuser.php">Deconnexion</a>
+    <form action="recheruserp.php" method="get" class="form-inline">
+        <input type="hidden" name="category" value="nom">
+
+        <div class="input-group">
+            <input type="text" id="value" name="value" class="form-control" placeholder="Search" required>
+<div class="input-group-append">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+            </div>
+    
+</form>
+</nav>
+
+<section class="jumbotron" style="background-color: #333; color: white; padding: 60px 0;">
+    <div class="container text-center">
+        <h2 class="display-4" style="color: white;" >About Accessories Store</h2>
+        <p class="lead">Welcome to Accessories Store, your ultimate destination for high-quality accessories.</p>
+        <div class="text-left">
+            <p>We are dedicated to providing our customers with the latest trends and unique pieces that complement their style. Our passion for accessories goes beyond just fashion; we believe that accessories are expressions of individuality.</p>
+            <p>Whether you're looking for a statement piece for a special occasion or everyday essentials, Accessories Store has a diverse selection for every taste. Explore our collection and discover how accessories can enhance your personal style.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <p>&copy; 2023 Exquisite Jewellery. All rights reserved.</p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
